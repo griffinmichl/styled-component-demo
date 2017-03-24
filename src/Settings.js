@@ -9,8 +9,6 @@ const FlexContainer = styled.div`
   display: flex;
   visibility: ${props => props.visibility || 'visible'};
   position: absolute;
-  top: ${props => props.top + 'px' || 0};
-  left: ${props => props.left + 'px' || 0};
   background: white;
   border: 1px solid grey;
   padding: 10px 20px;
@@ -46,7 +44,7 @@ class Settings extends React.Component {
     } = this.props;
 
     return (
-      <FlexContainer className={ className } { ...rest }>
+      <FlexContainer className={ className } { ...rest } style={ { top: rest.top, left: rest.left } }>
         <FlexChildProtected>
           <Button onClick={ handleClose }>Close</Button>
         </FlexChildProtected>
