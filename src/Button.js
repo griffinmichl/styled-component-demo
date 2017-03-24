@@ -6,5 +6,4 @@ export default styled.button`
   color: white;
   display: inline-block;
   background: rebeccapurple;
-  &:hover {
 `;
